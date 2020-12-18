@@ -1,13 +1,14 @@
 import sys
+import os
+from jdlogger import logger
 from jd_mask_spider_requests import Jd_Mask_Spider
 from QR_Login import JDLogin
-
 
 if __name__ == '__main__':
     login = JDLogin();
     if login.JD_RQ_login():
-        print("登录完成~")
-
+        logger.info("登录完成~")
+    logger.info("当前进程pid为【%s】", os.getpid())
     a = """
     ==========================
     1.预约商品
@@ -15,7 +16,7 @@ if __name__ == '__main__':
     ==========================
     """
     start_tool = Jd_Mask_Spider()
-    print(a)
+    logger.info(a)
     if len(sys.argv) > 1:
         gpus = sys.argv[1]
         choice_function = gpus
@@ -29,8 +30,5 @@ if __name__ == '__main__':
         start_tool.request_seckill_checkout_page()
         start_tool.submit_seckill_order()
     else:
-        print('没有此功能')
+        logger.error('没有此功能')
         sys.exit(1)
-
-     
-     
