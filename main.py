@@ -16,7 +16,11 @@ if __name__ == '__main__':
     """
     start_tool = Jd_Mask_Spider()
     print(a)
-    choice_function = input('选择功能:')
+    if len(sys.argv) > 1:
+        gpus = sys.argv[1]
+        choice_function = gpus
+    else:
+        choice_function = input('选择功能:')
     if choice_function == '1':
         start_tool.login()
         start_tool.make_reserve()

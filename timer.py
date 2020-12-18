@@ -13,13 +13,13 @@ class Timer(object):
         print(type(self.buy_time))
         self.sleep_interval = sleep_interval
 
-        date_today = datetime.now().date()
-        date_today_str = str(date_today) + " "
+        # date_today = datetime.now().date()
+        # date_today_str = str(date_today) + " "
         # print(date_today_str)
-        date_today_str = date_today_str + "10:00:00.100000"
+        # date_today_str = date_today_str + "10:00:00.100000"
         # print(date_today_str)
 
-        self.buy_time = datetime.strptime(date_today_str, "%Y-%m-%d %H:%M:%S.%f")
+        # self.buy_time = datetime.strptime(date_today_str, "%Y-%m-%d %H:%M:%S.%f")
         # print(self.buy_time)
 
 
