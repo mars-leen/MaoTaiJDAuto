@@ -10,6 +10,7 @@ from config import global_config
 import json
 
 class Jd_Mask_Spider(object):
+    list = [200, 302];
     def __init__(self):
         # 初始化信息
         self.session = get_session()
