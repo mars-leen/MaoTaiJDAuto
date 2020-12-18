@@ -2,16 +2,7 @@
 # -*- coding:utf-8 -*-
 # Author:曹敬贺
 
-import requests
-import json
-import os
-import pickle
-import re
-import random
 import time
-# from log import logger
-from timer import Timer
-from bs4 import BeautifulSoup
 from util import *
 from JDException import JDException
 

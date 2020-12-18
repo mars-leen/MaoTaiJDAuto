@@ -1,4 +1,3 @@
-import sys
 from jd_mask_spider_requests import Jd_Mask_Spider
 
 if __name__ == '__main__':
